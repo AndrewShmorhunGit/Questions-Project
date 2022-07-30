@@ -1,0 +1,316 @@
+/*
+- GENERAL REUSABLE COMPONENTS
+
+- FONT WEIGHTS:
+
+Derault: 400;
+500 / 700;
+
+- LINE HEIGHTS: 1.5 / ..
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- TEXT COLOR: #495057, #343a40, #212529;
+
+- SHADOWS
+
+box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
+
+- BORDER RADIUS
+
+Default: 1rem;
+
+- WHITESPACE, SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/**********/
+
+/* COLORS */
+
+/**********/
+
+/*  GENERAL  */
+/*************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  padding: 0 6.4rem;
+  background-color: #fefce9;
+}
+
+/****************/
+
+/*  NAVIGATION  */
+
+/****************/
+
+.nav-container {
+  font-family: Fira Code, sans-serif;
+  padding: 1rem 0;
+  background-color: #fdf5bc;
+}
+
+.navigation {
+  display: flex;
+  font-weight: 600;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 9.6rem;
+}
+
+.link {
+  font-family: Fira Code, sans-serif;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+  color: #212529;
+}
+
+.nav-link,
+.nav-link:link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 219, 79);
+  width: 22rem;
+  height: 10rem;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  border-radius: 1rem;
+  color: #212529;
+}
+
+.logo {
+  border-top-left-radius: 25%;
+  border-bottom-left-radius: 25%;
+  width: 10%;
+}
+
+.nav-icon {
+  width: 4rem;
+  margin-right: 2rem;
+  color: #212529;
+}
+
+/************/
+
+/* QUESTION */
+
+/************/
+
+.js-core {
+  padding: 9.6rem 8rem;
+  font-family: Fira Code, sans-serif;
+}
+
+.heading-list-primary {
+  font-family: Fira Code, sans-serif;
+  text-align: center;
+  font-size: 8.6rem;
+  padding-top: 4rem;
+  padding-bottom: 6.4rem;
+  color: #212529;
+}
+
+.heading-list-secondary {
+  text-align: center;
+  font-size: 6.2rem;
+  padding: 4.8rem 0;
+  color: #212529;
+}
+
+.questions-list {
+  background-color: none;
+}
+
+.question-in-list {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-color: #fefce9;
+  margin-bottom: 4rem;
+}
+
+.question-text-in-list {
+  font-family: Fira Code, sans-serif;
+  padding-left: 1rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid #323330;
+  color: #212529;
+}
+
+.question-number-in-list {
+  font-family: Fira Code, sans-serif;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  margin-right: 1.5rem;
+  /* padding: 2.5rem 0.5rem 0.5rem 2.5rem; */
+  /* width: 4.4rem; */
+  background-color: #f0db4f;
+  font-size: 4.4rem;
+  color: #323330;
+  cursor: pointer;
+  border: none;
+  transition: all 0.8s;
+}
+
+/***********/
+
+/* ANSWER */
+
+/**********/
+
+.answer-container {
+  padding: 0rem 4.8rem 2rem 2rem;
+  height: auto;
+}
+
+.answer-text {
+  font-family: Fira Code, sans-serif;
+  font-size: 2rem;
+  color: #212529;
+  padding-left: 0.5rem;
+  margin-bottom: 2rem;
+  margin-left: 3.2rem;
+  list-style-image: url(./icons/caret-right.svg);
+}
+
+.answer-text:first-child {
+  font-weight: 600;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  color: #212529;
+}
+
+.answer-number-in-list {
+  font-family: Fira Code, sans-serif;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  margin-right: 1.5rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 50%;
+  box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(45deg, #fdf5bc, #f7df1e);
+  font-size: 4.4rem;
+  color: #4a4309;
+  cursor: pointer;
+  border: none;
+  transition: all 0.8s;
+}
+
+.answer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: red;
+}
+
+.links-img {
+  height: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  filter: brightness(0);
+  opacity: 90%;
+  margin-bottom: 5rem;
+}
+
+.links-img-wiki {
+  height: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  filter: brightness(0);
+  opacity: 90%;
+  margin-bottom: 5rem;
+}
+
+.level-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level {
+  font-family: Fira Code, sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #4a4309;
+  background-color: #fdf5bc;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-bottom: 3.2rem;
+  margin-left: 80%;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(45deg, #fdf5bc, rgb(247, 223, 30));
+}
+
+/****************/
+
+/* CODE */
+
+/************/
+
+.code {
+  height: auto;
+  margin: 6rem 0rem;
+  font-family: Fira Code, sans-serif;
+  font-size: 2rem;
+  background-image: linear-gradient(90deg, #1e1e1e, #353535);
+  box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  border-left: 1rem solid #f7df1e;
+  padding: 3rem 3rem 1rem 4rem;
+  color: #fbf6e3;
+}
+
+.code p {
+  padding-bottom: 2rem;
+  color: #cfcfcf;
+}
+
+.code .var,
+.code .function {
+  color: #c1ceef;
+  font-weight: 500;
+}
+
+.code .num {
+  color: #00d061;
+  font-weight: 500;
+}
+
+.none {
+  height: 0rem;
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
