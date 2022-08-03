@@ -23,21 +23,25 @@ const QuestionJS = ({
     );
   });
 
-  const getAnswerCode = answerCode.map((el, index) => {
-    return (
-      <p key={index} className="code-text">
-        {el}
-      </p>
-    );
-  });
+  const getAnswerCode = () => {
+    answerCode.map((el, index) => {
+      return (
+        <p key={index} className="code-text">
+          {el}
+        </p>
+      );
+    });
+  };
 
-  const getQuestionCode = questionCode.map((el, index) => {
-    return (
-      <p key={index} className="code-text">
-        {el}
-      </p>
-    );
-  });
+  const getQuestionCode = () => {
+    questionCode.map((el, index) => {
+      return (
+        <p key={index} className="code-text">
+          {el}
+        </p>
+      );
+    });
+  };
 
   const getAnswerLink = () => {
     return (
@@ -77,12 +81,12 @@ const QuestionJS = ({
         </button>
         <p className="question-text-in-list">{question}</p>
       </li>
-      <div className={questionCode.length === 0 ? "none" : "code"}>
+      <div className={questionCode.length === 0 || "code"}>
         {getQuestionCode}
       </div>
 
       <div
-        className={` answer-container ${answer && "show-answer-container"}`}
+        className={!answer ? "show-answer-container" : `answer-container`}
         key={id}
       >
         <div className="level-container">
@@ -90,7 +94,7 @@ const QuestionJS = ({
         </div>
         <div className="answer-text">{getAnswer}</div>
 
-        <div className={answer ? "none" : "code"}>{getAnswerCode}</div>
+        <div className={answer && "code"}>{() => getAnswerCode()}</div>
         {getAnswerLink()}
       </div>
     </div>
