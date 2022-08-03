@@ -81,7 +81,10 @@ const QuestionJS = ({
         {getQuestionCode}
       </div>
 
-      <div className={answer ? "none" : "answer-container"} id={id}>
+      <div
+        className={` answer-container ${answer && "show-answer-container"}`}
+        key={id}
+      >
         <div className="level-container">
           <p className="level">{level}</p>
         </div>
