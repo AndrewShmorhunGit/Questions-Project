@@ -13,7 +13,7 @@ const QuestionJS = ({
   answerCode,
   answerLinks,
 }) => {
-  const [answer, setAnswer] = useState(true);
+  const [answer, setAnswer] = useState(false);
 
   const getAnswer = answerQuestion.map((el, index) => {
     return (
@@ -71,7 +71,7 @@ const QuestionJS = ({
       <li className="question-in-list">
         <button
           className={
-            answer ? "question-number-in-list" : "answer-number-in-list"
+            answer ? "answer-number-in-list" : "question-number-in-list"
           }
           onClick={() => {
             setAnswer(!answer);
@@ -86,7 +86,7 @@ const QuestionJS = ({
       </div>
 
       <div
-        className={!answer ? "show-answer-container" : `answer-container`}
+        className={answer ? "show-answer-container" : "answer-container"}
         key={id}
       >
         <div className="level-container">

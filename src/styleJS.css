@@ -184,12 +184,12 @@ html {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  transform: translateX(100%);
 }
 
 .show-answer-container {
   max-height: 100rem;
-  transition: all 2s ease;
-  /* transition: overflow 1s ease; */
+  transition: all 0.7s ease-in-out;
   opacity: 1;
 }
 
