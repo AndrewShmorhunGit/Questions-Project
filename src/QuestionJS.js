@@ -23,25 +23,21 @@ const QuestionJS = ({
     );
   });
 
-  const getAnswerCode = () => {
-    answerCode.map((el, index) => {
-      return (
-        <p key={index} className="code-text">
-          {el}
-        </p>
-      );
-    });
-  };
+  const getAnswerCode = answerCode.map((el, index) => {
+    return (
+      <p key={index} className="code-text">
+        {el}
+      </p>
+    );
+  });
 
-  const getQuestionCode = () => {
-    questionCode.map((el, index) => {
-      return (
-        <p key={index} className="code-text">
-          {el}
-        </p>
-      );
-    });
-  };
+  const getQuestionCode = questionCode.map((el, index) => {
+    return (
+      <p key={index} className="code-text">
+        {el}
+      </p>
+    );
+  });
 
   const getAnswerLink = () => {
     return (
@@ -94,7 +90,7 @@ const QuestionJS = ({
         </div>
         <div className="answer-text">{getAnswer}</div>
 
-        <div className={answer && "code"}>{() => getAnswerCode()}</div>
+        <div className={answer && "code"}>{getAnswerCode}</div>
         {getAnswerLink()}
       </div>
     </div>

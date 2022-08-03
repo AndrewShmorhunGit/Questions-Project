@@ -188,7 +188,7 @@ html {
 }
 
 .show-answer-container {
-  max-height: 100rem;
+  max-height: 1000rem;
   transition: all 0.7s ease-in-out;
   opacity: 1;
 }
